@@ -34,6 +34,10 @@
       --booking-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: var(--booking-bg);
     }
@@ -86,6 +90,7 @@
 
     .booking-page {
       padding: 72px 0 96px;
+      scroll-margin-top: 110px;
     }
 
     .booking-page__grid {
@@ -304,13 +309,116 @@
       color: #fff;
     }
 
+    /* Team section */
+    .booking-team {
+      padding: 48px 0 10px;
+    }
+
+    .booking-team__heading {
+      margin-bottom: 28px;
+    }
+
+    .booking-team__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .barber-card {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 22px;
+      align-items: stretch;
+      padding: 24px;
+      border-radius: 24px;
+      background: var(--booking-card);
+      border: 1px solid var(--booking-card-border);
+      box-shadow: var(--booking-shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .barber-card__image-wrap {
+      min-height: 280px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .barber-card__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .barber-card__role {
+      display: inline-block;
+      margin-bottom: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .barber-card__content h3 {
+      margin: 0 0 10px;
+      color: #fff;
+      font-size: 1.5rem;
+      line-height: 1.15;
+    }
+
+    .barber-card__specialty {
+      margin: 0 0 12px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .barber-card__bio {
+      margin: 0 0 16px;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.75;
+    }
+
+    .barber-card__list {
+      list-style: none;
+      margin: 0 0 20px;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .barber-card__list li {
+      position: relative;
+      padding-left: 18px;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .barber-card__list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.8;
+    }
+
     @media (max-width: 980px) {
-      .booking-page__grid {
+      .booking-page__grid,
+      .booking-team__grid,
+      .barber-card {
         grid-template-columns: 1fr;
       }
 
       .booking-sidebar {
         position: static;
+      }
+
+      .barber-card__image-wrap {
+        min-height: 320px;
       }
     }
 
@@ -320,7 +428,8 @@
       }
 
       .booking-card,
-      .booking-sidebar {
+      .booking-sidebar,
+      .barber-card {
         padding: 22px;
         border-radius: 20px;
       }
@@ -328,6 +437,10 @@
       .form-row {
         grid-template-columns: 1fr;
         gap: 18px;
+      }
+
+      .barber-card__image-wrap {
+        min-height: 260px;
       }
     }
   </style>
@@ -400,8 +513,100 @@
         </div>
       </section>
 
+      <!-- Team -->
+      <section class="booking-team section">
+        <div class="container">
+          <div class="section-heading booking-team__heading">
+            <p class="eyebrow">Our Team</p>
+            <h2>Choose your preferred barber.</h2>
+            <p>
+              Meet the professionals behind the chair. Select your preferred barber
+              when submitting your appointment request.
+            </p>
+          </div>
+
+          <div class="booking-team__grid">
+            <!-- Barber 1 -->
+            <article class="barber-card">
+              <div class="barber-card__image-wrap">
+                <img
+                  src="images/barber-1.jpg"
+                  alt="Portrait of Barber Name One at Solutions Barbershop 2"
+                  class="barber-card__image"
+                />
+              </div>
+
+              <div class="barber-card__content">
+                <span class="barber-card__role">Senior Barber</span>
+                <h3>Barber Name One</h3>
+                <p class="barber-card__specialty">
+                  Specializes in fades, beard work, and precision lineups.
+                </p>
+
+                <p class="barber-card__bio">
+                  Known for clean blends, sharp detail work, and a professional client
+                  experience from start to finish.
+                </p>
+
+                <ul class="barber-card__list">
+                  <li>Skin fades</li>
+                  <li>Haircut + beard</li>
+                  <li>Line up / shape up</li>
+                </ul>
+
+                <a
+                  href="#booking-form"
+                  class="btn btn--secondary"
+                  onclick="selectBarber(event, 'Barber Name One')"
+                >
+                  Request Barber One
+                </a>
+              </div>
+            </article>
+
+            <!-- Barber 2 -->
+            <article class="barber-card">
+              <div class="barber-card__image-wrap">
+                <img
+                  src="images/barber-2.jpg"
+                  alt="Portrait of Barber Name Two at Solutions Barbershop 2"
+                  class="barber-card__image"
+                />
+              </div>
+
+              <div class="barber-card__content">
+                <span class="barber-card__role">Barber</span>
+                <h3>Barber Name Two</h3>
+                <p class="barber-card__specialty">
+                  Specializes in modern cuts, kids cuts, and consistent finishing.
+                </p>
+
+                <p class="barber-card__bio">
+                  Focused on clean presentation, comfort, and delivering a polished
+                  result tailored to each client.
+                </p>
+
+                <ul class="barber-card__list">
+                  <li>Modern cuts</li>
+                  <li>Kids haircuts</li>
+                  <li>Classic grooming</li>
+                </ul>
+
+                <a
+                  href="#booking-form"
+                  class="btn btn--secondary"
+                  onclick="selectBarber(event, 'Barber Name Two')"
+                >
+                  Request Barber Two
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- Booking Content -->
-      <section class="booking-page">
+      <section class="booking-page" id="booking-form">
         <div class="container booking-page__grid">
           <!-- Main Form -->
           <article class="booking-card" aria-labelledby="booking-form-title">
@@ -499,10 +704,8 @@
                   <label for="barber-preference">Preferred Barber</label>
                   <select id="barber-preference" name="preferred_barber">
                     <option value="">No preference</option>
-                    <option value="No Preference">No Preference</option>
-                    <option value="Barber 1">Barber 1</option>
-                    <option value="Barber 2">Barber 2</option>
-                    <option value="Barber 3">Barber 3</option>
+                    <option value="Barber Name One">Barber Name One</option>
+                    <option value="Barber Name Two">Barber Name Two</option>
                   </select>
                 </div>
 
@@ -632,5 +835,34 @@
 
   <!-- Main JS -->
   <script src="js/main.js"></script>
+
+  <script>
+    function selectBarber(event, barberName) {
+      if (event) {
+        event.preventDefault();
+      }
+
+      const bookingSection = document.getElementById("booking-form");
+      const barberSelect = document.getElementById("barber-preference");
+
+      if (barberSelect) {
+        barberSelect.value = barberName;
+        barberSelect.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+
+      if (bookingSection) {
+        bookingSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+
+      setTimeout(() => {
+        if (barberSelect) {
+          barberSelect.focus();
+        }
+      }, 450);
+    }
+  </script>
 </body>
 </html>
