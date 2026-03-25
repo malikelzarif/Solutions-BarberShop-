@@ -1,146 +1,146 @@
 /* =========================================================
-   Royal Edge / Premium Barbershop Website
-   Main JavaScript
-   Handles:
-   - Mobile menu toggle
-   - Auto-closing mobile menu on link click
-   - Reviews slider
-   - Sticky header shadow on scroll
-   - Reveal on scroll
+   Solutions Barbershop 2 — Main JS
+   Clean, premium interactions
    ========================================================= */
 
 (function () {
-  "use strict";
-
-  const body = document.body;
-  const header = document.querySelector(".header");
-  const menuToggle = document.querySelector(".menu-toggle");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const mobileLinks = document.querySelectorAll(".mobile-menu__nav a");
-
-  const reviewCards = document.querySelectorAll(".review-card");
-  const prevBtn = document.querySelector(".review-btn--prev");
-  const nextBtn = document.querySelector(".review-btn--next");
-
-  let currentReview = 0;
+  const qs = (s, scope = document) => scope.querySelector(s);
+  const qsa = (s, scope = document) => Array.from(scope.querySelectorAll(s));
 
   /* -----------------------------
      Mobile Menu
   ------------------------------ */
-  function openMenu() {
-    if (!menuToggle || !mobileMenu) return;
+  const menuBtn = qs(".menu-toggle");
+  const mobileMenu = qs("#mobileMenu");
 
-    mobileMenu.hidden = false;
-    menuToggle.setAttribute("aria-expanded", "true");
-    body.style.overflow = "hidden";
-  }
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      const isOpen = mobileMenu.hasAttribute("hidden") === false;
 
-  function closeMenu() {
-    if (!menuToggle || !mobileMenu) return;
+      if (isOpen) {
+        mobileMenu.setAttribute("hidden", "");
+        menuBtn.setAttribute("aria-expanded", "false");
+      } else {
+        mobileMenu.removeAttribute("hidden");
+        menuBtn.setAttribute("aria-expanded", "true");
+      }
+    });
 
-    mobileMenu.hidden = true;
-    menuToggle.setAttribute("aria-expanded", "false");
-    body.style.overflow = "";
-  }
-
-  function toggleMenu() {
-    if (!mobileMenu || !menuToggle) return;
-
-    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-
-    if (isExpanded) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  }
-
-  if (menuToggle) {
-    menuToggle.addEventListener("click", toggleMenu);
-  }
-
-  if (mobileLinks.length) {
-    mobileLinks.forEach((link) => {
+    // Close menu on link click
+    qsa(".mobile-menu a").forEach((link) => {
       link.addEventListener("click", () => {
-        closeMenu();
+        mobileMenu.setAttribute("hidden", "");
+        menuBtn.setAttribute("aria-expanded", "false");
       });
     });
-  }
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 992) {
-      closeMenu();
-    }
-  });
-
-  /* -----------------------------
-     Reviews Slider
-  ------------------------------ */
-  function showReview(index) {
-    if (!reviewCards.length) return;
-
-    reviewCards.forEach((card, i) => {
-      card.classList.toggle("active", i === index);
+    // Close on outside click
+    document.addEventListener("click", (e) => {
+      if (
+        !mobileMenu.contains(e.target) &&
+        !menuBtn.contains(e.target)
+      ) {
+        mobileMenu.setAttribute("hidden", "");
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
     });
   }
 
-  function nextReview() {
-    currentReview = (currentReview + 1) % reviewCards.length;
-    showReview(currentReview);
-  }
-
-  function prevReview() {
-    currentReview = (currentReview - 1 + reviewCards.length) % reviewCards.length;
-    showReview(currentReview);
-  }
-
-  if (reviewCards.length) {
-    showReview(currentReview);
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener("click", nextReview);
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", prevReview);
-  }
-
-  // Optional auto-rotate every 6 seconds
-  if (reviewCards.length > 1) {
-    setInterval(nextReview, 6000);
-  }
-
   /* -----------------------------
-     Sticky Header Enhancement
+     Header Shadow on Scroll
   ------------------------------ */
-  function handleHeaderScroll() {
+  const header = qs(".header");
+
+  function handleScroll() {
     if (!header) return;
 
-    if (window.scrollY > 20) {
-      header.style.background = "rgba(10, 12, 17, 0.86)";
-      header.style.boxShadow = "0 10px 30px rgba(0,0,0,0.18)";
+    if (window.scrollY > 10) {
+      header.style.boxShadow = "0 10px 30px rgba(0,0,0,0.35)";
     } else {
-      header.style.background = "rgba(10, 12, 17, 0.68)";
       header.style.boxShadow = "none";
     }
   }
 
-  window.addEventListener("scroll", handleHeaderScroll);
-  handleHeaderScroll();
+  window.addEventListener("scroll", handleScroll);
 
   /* -----------------------------
-     Reveal on Scroll
+     Reviews Slider
   ------------------------------ */
-  const revealItems = document.querySelectorAll(
-    ".section-heading, .service-card, .info-card, .review-card, .social-card, .booking-panel__inner, .gallery-grid img"
-  );
+  const reviews = qsa(".review-card");
+  const nextBtn = qs(".review-btn--next");
+  const prevBtn = qs(".review-btn--prev");
 
-  revealItems.forEach((item) => {
-    item.style.opacity = "0";
-    item.style.transform = "translateY(24px)";
-    item.style.transition = "opacity 700ms ease, transform 700ms ease";
+  let current = 0;
+  let autoSlide;
+
+  function showReview(index) {
+    reviews.forEach((r) => r.classList.remove("active"));
+    reviews[index].classList.add("active");
+  }
+
+  function nextReview() {
+    current = (current + 1) % reviews.length;
+    showReview(current);
+  }
+
+  function prevReview() {
+    current = (current - 1 + reviews.length) % reviews.length;
+    showReview(current);
+  }
+
+  if (reviews.length) {
+    showReview(current);
+
+    autoSlide = setInterval(nextReview, 5000);
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        nextReview();
+        resetAuto();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        prevReview();
+        resetAuto();
+      });
+    }
+
+    function resetAuto() {
+      clearInterval(autoSlide);
+      autoSlide = setInterval(nextReview, 5000);
+    }
+  }
+
+  /* -----------------------------
+     Smooth Anchor Scroll
+  ------------------------------ */
+  qsa('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const targetId = this.getAttribute("href");
+
+      if (targetId.length > 1) {
+        const target = qs(targetId);
+
+        if (target) {
+          e.preventDefault();
+
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: "smooth",
+          });
+        }
+      }
+    });
   });
+
+  /* -----------------------------
+     Reveal Animations
+  ------------------------------ */
+  const revealItems = qsa(
+    ".section, .service-feature, .gallery-grid img, .review-card"
+  );
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -153,9 +153,15 @@
       });
     },
     {
-      threshold: 0.15,
+      threshold: 0.12,
     }
   );
 
-  revealItems.forEach((item) => observer.observe(item));
+  revealItems.forEach((el) => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(30px)";
+    el.style.transition = "all 0.8s ease";
+    observer.observe(el);
+  });
+
 })();

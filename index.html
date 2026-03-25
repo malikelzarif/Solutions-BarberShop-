@@ -6,49 +6,50 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   />
-  <title>Solutions Barbershop 2 | Premium Grooming Experience</title>
+  <title>Solutions Barbershop | Jersey City Barbershop</title>
   <meta
     name="description"
-    content="Premium barbershop website with online booking, gallery, reviews, and social media integration."
+    content="Premium barbering at Solutions Barbershop in Jersey City. Clean cuts, beard work, sharp fades, and easy booking through Booksy."
   />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
     rel="stylesheet"
   />
 
-  <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Site Shell -->
   <div class="site-shell">
     <!-- Header -->
     <header class="header" id="top">
       <div class="container header__inner">
-       <a href="#top" class="brand" aria-label="Solutions Barbershop 2 home">
-  <img src="images/logo.png" alt="Solutions Barbershop 2 Logo" class="brand__logo" />
-  <span class="brand__text">
-    <strong>Solutions</strong>
-    <small>Barbershop</small>
-  </span>
-</a>
+        <a href="#top" class="brand" aria-label="Solutions Barbershop home">
+          <img
+            src="images/logo.png"
+            alt="Solutions Barbershop logo"
+            class="brand__logo"
+          />
+        </a>
 
         <nav class="nav desktop-nav" aria-label="Primary navigation">
           <a href="#home">Home</a>
+          <a href="#services">Services</a>
           <a href="#about">About</a>
           <a href="#gallery">Gallery</a>
-          <a href="#reviews">Reviews</a>
-          <a href="booking.html">Booking</a>
+          <a href="#locations">Locations</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <div class="header__actions">
-        <a href="booking.html" class="btn btn--primary desktop-book-btn">
-  Book Now
-</a>
+          <a
+            href="#locations"
+            class="btn btn--primary desktop-book-btn"
+          >
+            Book Now
+          </a>
 
           <button
             class="menu-toggle"
@@ -64,162 +65,170 @@
         </div>
       </div>
 
-      <!-- Mobile Menu -->
       <div class="mobile-menu" id="mobileMenu" hidden>
         <nav class="mobile-menu__nav" aria-label="Mobile navigation">
           <a href="#home">Home</a>
+          <a href="#services">Services</a>
           <a href="#about">About</a>
           <a href="#gallery">Gallery</a>
-          <a href="#reviews">Reviews</a>
-          <a href="booking.html">Booking</a>
-          <a href="booking.html" class="btn btn--primary desktop-book-btn">
-  Book Now
-</a>
+          <a href="#locations">Locations</a>
+          <a href="#contact">Contact</a>
+          <a
+            href="#locations"
+            class="btn btn--primary btn--block"
+          >
+            Book Now
+          </a>
         </nav>
       </div>
     </header>
 
     <main>
       <!-- Hero -->
-      <section class="hero" id="home">
+      <section class="hero hero--editorial" id="home">
         <div class="hero__bg"></div>
-        <div class="container hero__content">
-          <div class="hero__text">
-            <p class="eyebrow">Premium Grooming Experience</p>
+
+        <div class="container hero__content hero__content--center">
+          <div class="hero__text hero__text--center">
+            <p class="eyebrow">Solutions Barbershop</p>
             <h1>
-              Precision cuts.<br />
-              Elevated style.<br />
-              Modern booking.
+              Modern barbering.<br />
+              Clean presentation.<br />
+              Sharp results.
             </h1>
             <p class="hero__lead">
-              A high-end barbershop experience built around craftsmanship,
-              convenience, and confidence. Book your next appointment online in
-              seconds.
+              Premium grooming in Jersey City with a clean atmosphere,
+              consistent work, and easy booking through Booksy.
             </p>
 
-            <div class="hero__buttons">
+            <div class="hero__buttons hero__buttons--center">
               <a
-                href="#booking"
+                href="#locations"
                 class="btn btn--primary"
               >
-                Book Appointment
+                Book Now
               </a>
-              <a
-                href="#gallery"
-                class="btn btn--secondary"
-              >
-                View Gallery
-              </a>
-            </div>
-
-            <div class="hero__stats">
-              <div class="stat">
-                <strong>4.9/5</strong>
-                <span>Client Rating</span>
-              </div>
-              <div class="stat">
-                <strong>500+</strong>
-                <span>Appointments Booked</span>
-              </div>
-              <div class="stat">
-                <strong>Premium</strong>
-                <span>Service Standard</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero__card">
-            <div class="booking-preview">
-              <p class="booking-preview__label">Next Available</p>
-              <h2>Book Your Visit</h2>
-              <ul>
-                <li>Haircut</li>
-                <li>Haircut + Beard</li>
-                <li>Shape Up</li>
-                <li>Kids Cut</li>
-              </ul>
-             <a href="booking.html" class="btn btn--primary desktop-book-btn">
-  Book Now
-</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Trust Strip -->
-      <section class="trust-strip">
-        <div class="container trust-strip__inner">
-          <p>Trusted by clients who value clean cuts, reliable scheduling, and a premium experience.</p>
+      <!-- Intro -->
+      <section class="section intro-strip">
+        <div class="container intro-strip__inner">
+          <p>
+            Built around strong service, clean cuts, and a better client experience.
+          </p>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section services-editorial" id="services">
+        <div class="container">
+          <div class="section-heading section-heading--center">
+            <p class="eyebrow">Services</p>
+            <h2>Services built around precision and consistency.</h2>
+            <p>
+              Clean grooming, simple booking, and a premium barbershop experience.
+            </p>
+          </div>
+
+          <div class="service-feature">
+            <div class="service-feature__image">
+              <img src="images/service-1.jpg" alt="Premium haircut service" />
+            </div>
+            <div class="service-feature__content">
+              <h3>Haircut</h3>
+              <p>
+                Clean fades, sharp lines, and tailored cuts designed to match
+                each client’s style.
+              </p>
+              <a
+                href="#locations"
+                class="text-link"
+              >
+                Reserve this service
+              </a>
+            </div>
+          </div>
+
+          <div class="service-feature service-feature--reverse">
+            <div class="service-feature__image">
+              <img src="images/service-2.jpg" alt="Haircut and beard service" />
+            </div>
+            <div class="service-feature__content">
+              <h3>Haircut + Beard</h3>
+              <p>
+                A complete grooming service combining haircut precision with a
+                polished beard finish.
+              </p>
+              <a
+                href="#locations"
+                class="text-link"
+              >
+                Reserve this service
+              </a>
+            </div>
+          </div>
+
+          <div class="service-feature">
+            <div class="service-feature__image">
+              <img src="images/service-3.jpg" alt="Shape up service" />
+            </div>
+            <div class="service-feature__content">
+              <h3>Shape Up</h3>
+              <p>
+                Fresh edges and detail work to stay sharp between full appointments.
+              </p>
+              <a
+                href="#locations"
+                class="text-link"
+              >
+                Reserve this service
+              </a>
+            </div>
+          </div>
+
+          <div class="service-feature service-feature--reverse">
+            <div class="service-feature__image">
+              <img src="images/service-4.jpg" alt="Kids haircut service" />
+            </div>
+            <div class="service-feature__content">
+              <h3>Kids Cut</h3>
+              <p>
+                Professional cuts with the same attention to presentation and detail.
+              </p>
+              <a
+                href="#locations"
+                class="text-link"
+              >
+                Reserve this service
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- About -->
-      <section class="section about" id="about">
+      <section class="section about-editorial" id="about">
         <div class="container section__grid">
           <div class="section__content">
-            <p class="eyebrow">About Us</p>
-            <h2>Barbering built on quality, detail, and consistency.</h2>
+            <p class="eyebrow">About</p>
+            <h2>A barbershop focused on quality, detail, and client experience.</h2>
             <p>
-              We combine traditional barbering precision with a modern client
-              experience. From sharp fades to full grooming services, every
-              appointment is designed to deliver a polished result and a
-              professional atmosphere.
+              Solutions Barbershop is built around consistent work, sharp
+              presentation, and an atmosphere clients feel comfortable returning to.
             </p>
             <p>
-              Our shop focuses on premium service, clean presentation, and easy
-              scheduling so every client can book, arrive, and leave with
-              confidence.
+              The goal is simple: deliver strong results and make booking easy.
             </p>
-
-            <div class="about__highlights">
-              <div class="info-card">
-                <h3>Professional Service</h3>
-                <p>High-standard grooming with attention to every detail.</p>
-              </div>
-              <div class="info-card">
-                <h3>Modern Booking</h3>
-                <p>Simple online scheduling connected to your preferred booking platform.</p>
-              </div>
-            </div>
           </div>
 
           <div class="section__visual">
             <div class="image-stack">
-              <img src="images/about-main.jpg" alt="Barber working on a premium haircut" />
-              <img src="images/about-detail.jpg" alt="Close-up of barber tools and premium setup" />
+              <img src="images/about-main.jpg" alt="Barber working on client" />
+              <img src="images/about-detail.jpg" alt="Close-up haircut detail" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Preview -->
-      <section class="section services-preview">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Services</p>
-            <h2>Premium grooming services for every client.</h2>
-          </div>
-
-          <div class="services-grid">
-            <article class="service-card">
-              <h3>Signature Haircut</h3>
-              <p>Clean, modern, and tailored to your style.</p>
-            </article>
-
-            <article class="service-card">
-              <h3>Haircut + Beard</h3>
-              <p>A complete grooming service with sharp finishing.</p>
-            </article>
-
-            <article class="service-card">
-              <h3>Line Up / Shape Up</h3>
-              <p>Fresh edges and clean detail work between cuts.</p>
-            </article>
-
-            <article class="service-card">
-              <h3>Kids Haircut</h3>
-              <p>Comfortable, professional cuts for younger clients.</p>
-            </article>
           </div>
         </div>
       </section>
@@ -227,157 +236,56 @@
       <!-- Gallery -->
       <section class="section gallery" id="gallery">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading section-heading--center">
             <p class="eyebrow">Gallery</p>
-            <h2>Real work. Real results.</h2>
+            <h2>Recent work and shop atmosphere.</h2>
             <p>
-              Add your best haircut, beard, shop interior, and client photos here.
+              Add your strongest haircut photos, beard work, and clean shop visuals here.
             </p>
           </div>
 
           <div class="gallery-grid">
-            <img src="images/gallery-1.jpg" alt="Premium haircut style example" />
-            <img src="images/gallery-2.jpg" alt="Client haircut and beard example" />
-            <img src="images/gallery-3.jpg" alt="Barbershop interior design" />
-            <img src="images/gallery-4.jpg" alt="Close-up finished fade haircut" />
-            <img src="images/gallery-5.jpg" alt="Barber tools and workstation" />
-            <img src="images/gallery-6.jpg" alt="Premium grooming result" />
+            <img src="images/gallery-1.jpg" alt="Fade haircut result" />
+            <img src="images/gallery-2.jpg" alt="Barber cutting hair" />
+            <img src="images/gallery-3.jpg" alt="Sharp lineup result" />
+            <img src="images/gallery-4.jpg" alt="Beard detail work" />
+            <img src="images/gallery-5.jpg" alt="Kids haircut result" />
+            <img src="images/gallery-6.jpg" alt="Barbershop interior" />
           </div>
         </div>
       </section>
 
-<!-- Instagram Preview -->
-<section class="section instagram-preview" id="instagram">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">Instagram</p>
-      <h2>Latest from the shop.</h2>
-      <p>
-        Fresh cuts, shop moments, and premium grooming results from Solutions Barbershop 2.
-      </p>
-    </div>
-
-    <div class="instagram-preview__top">
-      <a
-        href="https://instagram.com/solutions_barbershop_2"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn--secondary"
-      >
-        Follow on Instagram
-      </a>
-    </div>
-
-    <div class="instagram-grid">
-      <article class="instagram-card">
-        <blockquote
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/reel/DUG5zydEUid/"
-          data-instgrm-version="14"
-        ></blockquote>
-      </article>
-
-      <article class="instagram-card">
-        <blockquote
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/reel/DVFcYpJjLS_/"
-          data-instgrm-version="14"
-        ></blockquote>
-      </article>
-
-      <article class="instagram-card">
-        <blockquote
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/reel/DU18o5gjDz_/"
-          data-instgrm-version="14"
-        ></blockquote>
-      </article>
-    </div>
-  </div>
-</section>
-<!-- Google Reviews Preview -->
-<section class="section google-reviews" id="google-reviews">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">Google Reviews</p>
-      <h2>Trusted by local clients.</h2>
-      <p>
-        Real client feedback helps build confidence before the first appointment.
-      </p>
-    </div>
-
-    <div class="google-reviews__top">
-      <a
-        href="https://www.google.com/search?q=Solutions+Barbershop+2"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn--secondary"
-      >
-        View on Google
-      </a>
-    </div>
-
-    <div class="google-reviews-grid">
-      <article class="google-review-card">
-        <div class="google-review-card__stars">★★★★★</div>
-        <p>
-          “Great service, clean shop, and very professional. Booking was easy and the haircut came out exactly how I wanted.”
-        </p>
-        <h3>Google Reviewer</h3>
-      </article>
-
-      <article class="google-review-card">
-        <div class="google-review-card__stars">★★★★★</div>
-        <p>
-          “One of the best barbershops in the area. Friendly atmosphere, sharp cuts, and very consistent work.”
-        </p>
-        <h3>Google Reviewer</h3>
-      </article>
-
-      <article class="google-review-card">
-        <div class="google-review-card__stars">★★★★★</div>
-        <p>
-          “Professional experience from start to finish. Clean fades, great customer service, and highly recommended.”
-        </p>
-        <h3>Google Reviewer</h3>
-      </article>
-    </div>
-  </div>
-</section>
       <!-- Reviews -->
       <section class="section reviews" id="reviews">
         <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Client Reviews</p>
-            <h2>What clients are saying.</h2>
+          <div class="section-heading section-heading--center">
+            <p class="eyebrow">Reviews</p>
+            <h2>Trusted by clients who value clean work.</h2>
           </div>
 
           <div class="reviews-slider">
             <article class="review-card active">
               <div class="stars" aria-label="5 star review">★★★★★</div>
               <p>
-                “Excellent service, sharp cut, and easy booking. The whole
-                experience felt clean and professional.”
+                “Great atmosphere, clean cut, and easy booking. Everything felt professional.”
               </p>
-              <h3>Michael R.</h3>
+              <h3>Client Review</h3>
             </article>
 
             <article class="review-card">
               <div class="stars" aria-label="5 star review">★★★★★</div>
               <p>
-                “One of the best barbershop experiences I’ve had. Great atmosphere
-                and very consistent results.”
+                “Strong attention to detail and one of the best cuts I’ve had.”
               </p>
-              <h3>Daniel T.</h3>
+              <h3>Client Review</h3>
             </article>
 
             <article class="review-card">
               <div class="stars" aria-label="5 star review">★★★★★</div>
               <p>
-                “Booking online was simple, and the haircut was exactly what I
-                wanted. Highly recommended.”
+                “Booking through Booksy was simple and the service was on point.”
               </p>
-              <h3>Chris A.</h3>
+              <h3>Client Review</h3>
             </article>
           </div>
 
@@ -392,89 +300,186 @@
         </div>
       </section>
 
-     
-      <!-- Social -->
-      <section class="section social-section">
+      <!-- Booking CTA -->
+      <section class="section cta-section" id="contact">
         <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Social Media</p>
-            <h2>Stay connected.</h2>
+          <div class="cta-panel">
+            <p class="eyebrow">Book Your Appointment</p>
+            <h2>Reserve your next visit through Booksy.</h2>
+            <p>
+              Choose your service, select your time, and book quickly online.
+            </p>
+
+            <div class="cta-buttons">
+              <a
+                href="https://booksy.com/en-us/444251_solutions-barbershop-1_barber-shop_28561_jersey-city#ba_s=sh_1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--primary"
+              >
+                Solutions Barbershop 1
+              </a>
+
+              <a
+                href="https://booksy.com/en-us/88253_solutions-barber-shop-2_barber-shop_28561_jersey-city#ba_s=sh_1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--primary"
+              >
+                Solutions Barbershop 2
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Locations -->
+      <section class="section locations" id="locations">
+        <div class="container">
+          <div class="section-heading section-heading--center">
+            <p class="eyebrow">Book Your Appointment</p>
+            <h2>Choose Your Solutions Barbershop</h2>
+            <p>
+              Select your preferred location and book directly with the team.
+            </p>
           </div>
 
-          <div class="social-grid">
-<a href="https://instagram.com/solutions_barbershop_2" target="_blank" rel="noopener noreferrer" class="social-card">
-              <span>Instagram</span>
-              <strong>@solutions_barbershop_2</strong>
-            </a>
+          <div class="locations-grid">
 
-            <a href="#" target="_blank" rel="noopener noreferrer" class="social-card">
-              <span>Facebook</span>
-              <strong>Solutions Barbershop</strong>
-            </a>
+            <!-- Location 1 -->
+            <article class="location-card">
+              <div class="location-card__map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.772167278826!2d-74.05097242467808!3d40.72303173694127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b26aaaaaab%3A0x131466983951f1e1!2sSolutions%20Barber%20Shop1!5e0!3m2!1sen!2sus!4v1774459133577!5m2!1sen!2sus"
+                  loading="lazy"
+                  allowfullscreen>
+                </iframe>
+              </div>
 
-            <a href="#" target="_blank" rel="noopener noreferrer" class="social-card">
-              <span>TikTok</span>
-              <strong>@yourbarbershop</strong>
-            </a>
+              <div class="location-card__content">
+                <p class="location-card__label">Location 1</p>
+                <h3>Solutions Barbershop 1</h3>
+                <p class="location-card__address">342 Second St, Jersey City, NJ 07302</p>
+                <p class="location-card__meta">5.0 ★ · 757 reviews</p>
+
+                <div class="location-card__actions">
+                  <a
+                    href="https://maps.app.goo.gl/QKT51pefLmHjY7CWA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--secondary"
+                  >
+                    Directions
+                  </a>
+                  <a
+                    href="https://booksy.com/en-us/444251_solutions-barbershop-1_barber-shop_28561_jersey-city#ba_s=sh_1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--primary"
+                  >
+                    Book Location 1
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Location 2 -->
+            <article class="location-card">
+              <div class="location-card__map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.8976425072087!2d-74.04861402467836!3d40.72026973711037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c251b2bd494c13%3A0xd9ad3f0f8f757e2c!2sSolutions%20barber%20shop%202!5e0!3m2!1sen!2sus!4v1774459174616!5m2!1sen!2sus"
+                  loading="lazy"
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <div class="location-card__content">
+                <p class="location-card__label">Location 2</p>
+                <h3>Solutions Barber Shop 2</h3>
+                <p class="location-card__address">163 Christopher Columbus Dr, Jersey City, NJ 07302</p>
+                <p class="location-card__meta">4.9 ★ · 1,076 reviews</p>
+
+                <div class="location-card__actions">
+                  <a
+                    href="https://maps.app.goo.gl/3iNfX1eux7tzGcUZ8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--secondary"
+                  >
+                    Directions
+                  </a>
+                  <a
+                    href="https://booksy.com/en-us/88253_solutions-barber-shop-2_barber-shop_28561_jersey-city#ba_s=sh_1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--primary"
+                  >
+                    Book Location 2
+                  </a>
+                </div>
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer" id="contact">
+    <footer class="footer">
       <div class="container footer__inner">
         <div class="footer__brand">
-          <h2>Solutions Barbershop_2</h2>
-          <p>Premium barbering. Professional presentation. Modern booking.</p>
+          <img
+            src="images/logo.png"
+            alt="Solutions Barbershop logo"
+            class="footer__logo"
+          />
+          <p>Premium barbering. Clean presentation. Easy booking.</p>
         </div>
 
         <div class="footer__links">
           <div>
             <h3>Navigation</h3>
             <a href="#home">Home</a>
+            <a href="#services">Services</a>
             <a href="#about">About</a>
             <a href="#gallery">Gallery</a>
-            <a href="#reviews">Reviews</a>
-            <a href="booking.html">Booking</a>
-          </div>
-
-          <div>
-            <h3>Contact</h3>
-            <a href="tel:+12015550123">(201) 555-0123</a>
-            <a href="mailto:hello@bershop.com">hello@barbershop.com</a>
-            <span>Jersey City, NJ</span>
+            <a href="#locations">Locations</a>
+            <a href="#contact">Contact</a>
           </div>
 
           <div>
             <h3>Follow</h3>
             <a href="https://instagram.com/solutions_barbershop_2" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="https://booksy.com/en-us/444251_solutions-barbershop-1_barber-shop_28561_jersey-city#ba_s=sh_1" target="_blank" rel="noopener noreferrer">Booksy 1</a>
+            <a href="https://booksy.com/en-us/88253_solutions-barber-shop-2_barber-shop_28561_jersey_city#ba_s=sh_1" target="_blank" rel="noopener noreferrer">Booksy 2</a>
+          </div>
+
+          <div>
+            <h3>Book</h3>
+            <a
+              href="#locations"
+            >
+              Reserve Appointment
+            </a>
           </div>
         </div>
       </div>
-<div class="site-credit">
-  <p>
-    Website designed and developed by
-    <a href="https://malikelzarif.com" target="_blank" rel="noopener noreferrer">
-      Malik Elzarif
-    </a>.
-    For web design, development, and business inquiries, please visit my website.
-  </p>
-</div>
+
+      <div class="site-credit">
+        <p>
+          © <span id="year"></span> Solutions Barbershop. All rights reserved.<br />
+          Website designed and developed by
+          <a href="https://malikelzarif.com" target="_blank" rel="noopener noreferrer">
+            Malik Elzarif
+          </a>.
+        </p>
+      </div>
     </footer>
   </div>
 
-  <!-- Main JS -->
   <script src="js/main.js"></script>
-<script async src="https://www.instagram.com/embed.js"></script>
-<script>
-  window.addEventListener("load", function () {
-    if (window.instgrm) {
-      window.instgrm.Embeds.process();
-    }
-  });
-</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
