@@ -38,7 +38,7 @@
   --pill: 999px;
 
   --container: 1240px;
-  --header-h: 96px;
+  --header-h: 108px;
 
   --dur-fast: 180ms;
   --dur: 320ms;
@@ -317,17 +317,24 @@ p {
   top: 0;
   z-index: 90;
   backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.68);
-  border-bottom: 1px solid rgba(17, 17, 17, 0.06);
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom: none;
   transition:
     background var(--dur) var(--ease),
-    border-color var(--dur) var(--ease),
     box-shadow var(--dur) var(--ease);
 }
 
 .header.is-scrolled {
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.header .container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 28px;
 }
 
 .header__inner {
@@ -335,19 +342,26 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
 }
 
 .brand {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: flex-start;
   flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
 }
 
 .brand__logo {
-  height: 120px;
+  display: block;
+  height: 140px;
   width: auto;
   object-fit: contain;
+  margin: 0;
+  padding: 0;
   filter: saturate(0.98) contrast(1.02);
 }
 
@@ -404,7 +418,9 @@ p {
   gap: 5px;
   background: rgba(17, 17, 17, 0.04);
   border: 1px solid var(--line);
-  transition: background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+  transition:
+    background var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
 }
 
 .menu-toggle:hover {
@@ -417,7 +433,9 @@ p {
   height: 2px;
   background: var(--black);
   border-radius: 10px;
-  transition: transform var(--dur-fast) var(--ease), opacity var(--dur-fast) var(--ease);
+  transition:
+    transform var(--dur-fast) var(--ease),
+    opacity var(--dur-fast) var(--ease);
 }
 
 .menu-toggle.is-active span:nth-child(1) {
@@ -925,7 +943,7 @@ p {
 }
 
 .footer__logo {
-  height: 74px;
+  height: 120px;
   width: auto;
   margin-bottom: 14px;
 }
@@ -1048,7 +1066,7 @@ p {
 ------------------------------ */
 @media (max-width: 992px) {
   :root {
-    --header-h: 84px;
+    --header-h: 88px;
   }
 
   .desktop-nav,
@@ -1058,6 +1076,21 @@ p {
 
   .menu-toggle {
     display: inline-flex;
+  }
+
+  .header .container {
+    padding-left: 0;
+    padding-right: 16px;
+  }
+
+  .header__inner {
+    min-height: var(--header-h);
+    gap: 12px;
+  }
+
+  .brand__logo {
+    height: 86px;
+    max-width: 240px;
   }
 
   .hero {
@@ -1116,7 +1149,7 @@ p {
 ------------------------------ */
 @media (max-width: 768px) {
   :root {
-    --header-h: 74px;
+    --header-h: 92px;
   }
 
   .section {
@@ -1127,20 +1160,38 @@ p {
     width: min(calc(100% - 22px), var(--container));
   }
 
+  .header .container {
+    padding-left: 0;
+    padding-right: 14px;
+  }
+
   .header__inner {
     min-height: var(--header-h);
     gap: 12px;
+    align-items: center;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: calc(100% - 58px);
   }
 
   .brand__logo {
-    height: 90px;
-    max-width: 250px;
+    height: 72px;
+    max-width: 220px;
+    width: auto;
+    object-fit: contain;
+    filter: saturate(1.08) contrast(1.08);
   }
 
   .menu-toggle {
     width: 42px;
     height: 42px;
     border-radius: 14px;
+    flex-shrink: 0;
   }
 
   .hero {
