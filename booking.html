@@ -4,31 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Book an Appointment | Solutions Barbershop Jersey City</title>
+  <title>Book Your Appointment | Solutions Barbershop Jersey City</title>
   <meta
     name="description"
-    content="Book your appointment at Solutions Barbershop through Google booking or direct location booking links for our Jersey City barbershops."
+    content="Book with Solutions Barbershop across two Jersey City locations. Choose your shop, barber, service, and booking method with one premium Apple-level booking experience powered by Booksy and Google."
   />
   <link rel="canonical" href="https://solutionsbarbershop.com/booking.html" />
   <meta name="robots" content="index, follow" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Book an Appointment | Solutions Barbershop Jersey City" />
+  <meta property="og:title" content="Book Your Appointment | Solutions Barbershop Jersey City" />
   <meta
     property="og:description"
-    content="Reserve your next haircut, beard service, or grooming appointment online with Solutions Barbershop."
+    content="Choose your location, barber, service, and booking method from one refined premium booking page for both Solutions Barbershop locations."
   />
   <meta property="og:url" content="https://solutionsbarbershop.com/booking.html" />
   <meta property="og:site_name" content="Solutions Barbershop" />
-  <meta property="og:image" content="https://solutionsbarbershop.com/images/og-booking.jpg" />
+  <meta property="og:image" content="https://solutionsbarbershop.com/images/og-home.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Book an Appointment | Solutions Barbershop Jersey City" />
+  <meta name="twitter:title" content="Book Your Appointment | Solutions Barbershop Jersey City" />
   <meta
     name="twitter:description"
-    content="Reserve your next appointment online with Solutions Barbershop in Jersey City."
+    content="A refined one-page booking experience for both Solutions Barbershop locations."
   />
-  <meta name="twitter:image" content="https://solutionsbarbershop.com/images/og-booking.jpg" />
+  <meta name="twitter:image" content="https://solutionsbarbershop.com/images/og-home.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,15 +38,7 @@
   />
 
   <link rel="stylesheet" href="css/style.css" />
-
-  <link
-    href="https://calendar.google.com/calendar/scheduling-button-script.css"
-    rel="stylesheet"
-  />
-  <script
-    src="https://calendar.google.com/calendar/scheduling-button-script.js"
-    async
-  ></script>
+  <link rel="stylesheet" href="css/booking.css" />
 </head>
 <body>
   <div class="site-shell">
@@ -63,7 +55,7 @@
         <nav class="nav desktop-nav" aria-label="Primary navigation">
           <a href="index.html#home">Home</a>
           <a href="services.html">Services</a>
-          <a href="booking.html" class="is-active">Booking</a>
+          <a href="booking.html" class="is-active" aria-current="page">Booking</a>
           <a href="index.html#about">About</a>
           <a href="index.html#gallery">Gallery</a>
           <a href="index.html#reviews">Reviews</a>
@@ -72,7 +64,7 @@
         </nav>
 
         <div class="header__actions">
-          <a href="booking.html" class="btn btn--primary desktop-book-btn">
+          <a href="#booking-section" class="btn btn--primary desktop-book-btn">
             Book Now
           </a>
 
@@ -94,14 +86,14 @@
         <nav class="mobile-menu__nav" aria-label="Mobile navigation">
           <a href="index.html#home">Home</a>
           <a href="services.html">Services</a>
-          <a href="booking.html" class="is-active">Booking</a>
+          <a href="booking.html" class="is-active" aria-current="page">Booking</a>
           <a href="index.html#about">About</a>
           <a href="index.html#gallery">Gallery</a>
           <a href="index.html#reviews">Reviews</a>
           <a href="index.html#contact">Contact</a>
           <a href="index.html#locations">Locations</a>
 
-          <a href="booking.html" class="btn btn--primary btn--block">
+          <a href="#booking-section" class="btn btn--primary btn--block">
             Book Now
           </a>
         </nav>
@@ -109,34 +101,51 @@
     </header>
 
     <main>
-      <section class="hero hero--editorial" id="booking-top">
+      <section class="hero hero--editorial booking-hero booking-hero--apple" id="booking-hero">
         <div class="hero__bg"></div>
 
         <div class="container hero__content hero__content--center">
           <div class="hero__text hero__text--center">
-            <p class="eyebrow">Booking</p>
+            <p class="eyebrow">Premium One-Page Booking</p>
             <h1>
-              Book your visit<br />
-              with speed,<br />
-              clarity, and ease.
+              A booking experience<br />
+              designed to feel effortless.
             </h1>
             <p class="hero__lead">
-              Reserve your appointment through our official Google booking page
-              or use direct booking links for either Solutions Barbershop location.
+              Choose your location, select your barber, add service details,
+              and launch the right booking method from one elevated page built
+              to feel clean, modern, and precise from start to finish.
             </p>
 
             <div class="hero__buttons hero__buttons--center">
-              <a
-                href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0E1r_4To1sK164vhmS2AgQCMe7xYa3B7efXYMJTUBiBKLMbh55CI8Kr1EiWnxWw4CgQrz9uj-W?gv=true"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn--primary"
-              >
-                Open Google Booking
+              <a href="#booking-section" class="btn btn--primary">
+                Start Booking
               </a>
-              <a href="#booking-options" class="btn btn--secondary">
-                View Booking Options
+              <a href="#shop-locations" class="btn btn--secondary">
+                Explore Locations
               </a>
+            </div>
+
+            <div class="booking-hero__stats" aria-label="Booking highlights">
+              <article class="booking-hero__stat">
+                <strong>2</strong>
+                <span>Shop Locations</span>
+              </article>
+
+              <article class="booking-hero__stat">
+                <strong>4</strong>
+                <span>Barbers Listed</span>
+              </article>
+
+              <article class="booking-hero__stat">
+                <strong>2</strong>
+                <span>Booking Methods</span>
+              </article>
+
+              <article class="booking-hero__stat">
+                <strong>1</strong>
+                <span>Unified System</span>
+              </article>
             </div>
           </div>
         </div>
@@ -145,166 +154,738 @@
       <section class="section intro-strip">
         <div class="container intro-strip__inner">
           <p>
-            Choose the booking method that works best for you, whether you want the main
-            Google appointment page or direct booking by location.
+            A sharper digital booking flow for a sharper barbershop brand.
+            Less friction. Better structure. Cleaner choices.
           </p>
         </div>
       </section>
 
-      <section class="section" id="booking-options">
+      <section class="section booking-flow booking-flow--apple" id="booking-flow">
         <div class="container">
-          <div class="section-heading section-heading--center">
-            <p class="eyebrow">Main Booking</p>
-            <h2>Book through the official Google appointment page.</h2>
+          <div class="section-heading section-heading--center booking-flow__heading">
+            <p class="eyebrow">How It Works</p>
+            <h2>Everything is designed to guide the client naturally.</h2>
             <p>
-              This is the primary booking path for clients who want to reserve a time quickly.
+              The page walks the user from shop selection to booking handoff with less noise,
+              more clarity, and a premium step-by-step flow.
             </p>
           </div>
 
-          <div class="cta-panel">
-            <p class="eyebrow">Google Appointment Schedule</p>
-            <h2>Reserve your appointment online.</h2>
-            <p>
-              Use the official scheduling page to choose an available time and complete your booking.
-            </p>
+          <div class="booking-steps" aria-label="Booking steps">
+            <article class="booking-step-card is-active" data-step="1">
+              <span class="booking-step-card__number">01</span>
+              <h3>Choose location</h3>
+              <p>Select the right shop first so the correct team and booking links sync automatically.</p>
+            </article>
 
-            <div class="hero__buttons hero__buttons--center">
-              <a
-                href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0E1r_4To1sK164vhmS2AgQCMe7xYa3B7efXYMJTUBiBKLMbh55CI8Kr1EiWnxWw4CgQrz9uj-W?gv=true"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn--primary"
-              >
-                Book Appointment
-              </a>
+            <article class="booking-step-card" data-step="2">
+              <span class="booking-step-card__number">02</span>
+              <h3>Choose barber</h3>
+              <p>Pick the barber you want and have the page instantly connect the right shop and profile.</p>
+            </article>
+
+            <article class="booking-step-card" data-step="3">
+              <span class="booking-step-card__number">03</span>
+              <h3>Customize booking</h3>
+              <p>Add a service and optional notes to keep the client journey more intentional and organized.</p>
+            </article>
+
+            <article class="booking-step-card" data-step="4">
+              <span class="booking-step-card__number">04</span>
+              <h3>Launch booking</h3>
+              <p>Finish with Booksy or Google from the same interface without breaking the visual flow.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section locations booking-locations booking-locations--apple" id="shop-locations">
+        <div class="container">
+          <div class="section-heading section-heading--center">
+            <p class="eyebrow">Locations</p>
+            <h2>Start with the shop that works best for you.</h2>
+            <p>
+              Each location card is tied to the correct team, map, and Booksy booking flow
+              while keeping Google booking available inside the same system.
+            </p>
+          </div>
+
+          <div class="locations-grid">
+            <article
+              class="location-card js-shop-card"
+              data-shop="shop-1"
+              data-shop-label="Solutions Barbershop 1"
+              data-booksy-url="https://booksy.com/en-us/444251_solutions-barbershop-1_barber-shop_28561_jersey-city#ba_s=sh_1"
+              data-google-url="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0E1r_4To1sK164vhmS2AgQCMe7xYa3B7efXYMJTUBiBKLMbh55CI8Kr1EiWnxWw4CgQrz9uj-W"
+              tabindex="0"
+              aria-label="Select Solutions Barbershop 1"
+            >
+              <div class="location-card__map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.772167278826!2d-74.05097242467808!3d40.72303173694127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b26aaaaaab%3A0x131466983951f1e1!2sSolutions%20Barber%20Shop1!5e0!3m2!1sen!2sus!4v1774459133577!5m2!1sen!2sus"
+                  loading="lazy"
+                  allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Solutions Barbershop 1 map"
+                ></iframe>
+              </div>
+
+              <div class="location-card__content">
+                <p class="location-card__label">Location 1</p>
+                <h3>Solutions Barbershop 1</h3>
+                <p class="location-card__address">342 Second St, Jersey City, NJ 07302</p>
+                <p class="location-card__meta">Refined neighborhood barbershop experience</p>
+
+                <ul class="location-card__badges" aria-label="Shop 1 features">
+                  <li>Booksy enabled</li>
+                  <li>Google booking</li>
+                  <li>Three listed barbers</li>
+                </ul>
+
+                <div class="location-card__actions">
+                  <a
+                    href="https://www.google.com/maps/place/Solutions+Barber+Shop1/@40.7230277,-74.0551343,16z/data=!4m10!1m2!2m1!1sSolutions+Barber+Shop2!3m6!1s0x89c250b26aaaaaab:0x131466983951f1e1!8m2!3d40.7230277!4d-74.0483975!15sChZTb2x1dGlvbnMgQmFyYmVyIFNob3AyWhgiFnNvbHV0aW9ucyBiYXJiZXIgc2hvcDKSAQtiYXJiZXJfc2hvcOABAA!16s%2Fg%2F11dzs_7f61?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--secondary"
+                  >
+                    Get Directions
+                  </a>
+
+                  <button
+                    type="button"
+                    class="btn btn--primary js-select-shop"
+                    data-shop="shop-1"
+                    data-scroll-target="#booking-section"
+                  >
+                    Select Shop 1
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="location-card js-shop-card"
+              data-shop="shop-2"
+              data-shop-label="Solutions Barber Shop 2"
+              data-booksy-url="https://booksy.com/en-us/88253_solutions-barber-shop-2_barber-shop_28561_jersey-city#ba_s=sh_1"
+              data-google-url="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0E1r_4To1sK164vhmS2AgQCMe7xYa3B7efXYMJTUBiBKLMbh55CI8Kr1EiWnxWw4CgQrz9uj-W"
+              tabindex="0"
+              aria-label="Select Solutions Barber Shop 2"
+            >
+              <div class="location-card__map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.8976425072087!2d-74.04861402467836!3d40.72026973711037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c251b2bd494c13%3A0xd9ad3f0f8f757e2c!2sSolutions%20barber%20shop%202!5e0!3m2!1sen!2sus!4v1774459174616!5m2!1sen!2sus"
+                  loading="lazy"
+                  allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Solutions Barber Shop 2 map"
+                ></iframe>
+              </div>
+
+              <div class="location-card__content">
+                <p class="location-card__label">Location 2</p>
+                <h3>Solutions Barber Shop 2</h3>
+                <p class="location-card__address">163 Christopher Columbus Dr, Jersey City, NJ 07302</p>
+                <p class="location-card__meta">Downtown location with premium walk-in energy</p>
+
+                <ul class="location-card__badges" aria-label="Shop 2 features">
+                  <li>Booksy enabled</li>
+                  <li>Google booking</li>
+                  <li>One listed barber</li>
+                </ul>
+
+                <div class="location-card__actions">
+                  <a
+                    href="https://www.google.com/maps/place/Solutions+barber+shop+2/@40.7230277,-74.0551343,16z/data=!4m10!1m2!2m1!1sSolutions+Barber+Shop2!3m6!1s0x89c251b2bd494c13:0xd9ad3f0f8f757e2c!8m2!3d40.7202657!4d-74.0460391!15sChZTb2x1dGlvbnMgQmFyYmVyIFNob3AyWhgiFnNvbHV0aW9ucyBiYXJiZXIgc2hvcDKSAQtiYXJiZXJfc2hvcOABAA!16s%2Fg%2F11mylf8vjg?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--secondary"
+                  >
+                    Get Directions
+                  </a>
+
+                  <button
+                    type="button"
+                    class="btn btn--primary js-select-shop"
+                    data-shop="shop-2"
+                    data-scroll-target="#booking-section"
+                  >
+                    Select Shop 2
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section booking-team booking-team--apple" id="booking-team">
+        <div class="container">
+          <div class="section-heading section-heading--center booking-team__heading">
+            <p class="eyebrow">Teams</p>
+            <h2>Choose the barber you want to book with.</h2>
+            <p>
+              Barber cards feel more editorial, more premium, and more intentional
+              while still syncing directly into the one-page booking form.
+            </p>
+          </div>
+
+          <div class="booking-team-toolbar" aria-label="Team navigation">
+            <a href="#shop-1-team" class="btn btn--secondary booking-team-toolbar__link">
+              Shop 1 Team
+            </a>
+            <a href="#shop-2-team" class="btn btn--secondary booking-team-toolbar__link">
+              Shop 2 Team
+            </a>
+            <a href="#booking-section" class="btn btn--primary booking-team-toolbar__link">
+              Go To Booking
+            </a>
+          </div>
+
+          <div class="booking-team-group" data-shop="shop-1" id="shop-1-team">
+            <div class="booking-team-group__heading">
+              <p class="eyebrow">Shop 1 Team</p>
+              <h3>Solutions Barbershop 1</h3>
             </div>
 
-            <div style="margin-top: 18px; display: flex; justify-content: center;">
-              <div id="google-booking-button"></div>
+            <div class="booking-team__grid">
+              <article
+                class="barber-card js-barber-card"
+                data-shop="shop-1"
+                data-shop-label="Solutions Barbershop 1"
+                data-barber="Channel"
+                data-barber-id="channel"
+                tabindex="0"
+                aria-label="Select Channel at Solutions Barbershop 1"
+              >
+                <div class="barber-card__image-wrap">
+                  <div class="barber-card__image barber-card__image--placeholder" aria-hidden="true">
+                    <span class="barber-card__initials">CH</span>
+                  </div>
+                </div>
+
+                <div class="barber-card__content">
+                  <p class="barber-card__role">Master Barber</p>
+                  <h3>Channel</h3>
+                  <p class="barber-card__specialty">
+                    Haircut • Haircut + Beard • Kids Haircut • Shape Up • Hair Design
+                  </p>
+                  <p class="barber-card__bio">
+                    Best for sharp detail, clean fades, beard precision, and polished finishing work.
+                  </p>
+
+                  <div class="barber-card__meta">
+                    <span class="barber-card__tag">Shop 1</span>
+                    <span class="barber-card__tag">Premium Detail</span>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="btn btn--secondary js-select-barber"
+                    data-shop="shop-1"
+                    data-barber="Channel"
+                    data-barber-id="channel"
+                    data-scroll-target="#booking-section"
+                  >
+                    Select Channel
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="barber-card js-barber-card"
+                data-shop="shop-1"
+                data-shop-label="Solutions Barbershop 1"
+                data-barber="Jonathan"
+                data-barber-id="jonathan"
+                tabindex="0"
+                aria-label="Select Jonathan at Solutions Barbershop 1"
+              >
+                <div class="barber-card__image-wrap">
+                  <div class="barber-card__image barber-card__image--placeholder" aria-hidden="true">
+                    <span class="barber-card__initials">JT</span>
+                  </div>
+                </div>
+
+                <div class="barber-card__content">
+                  <p class="barber-card__role">Master Barber</p>
+                  <h3>Jonathan</h3>
+                  <p class="barber-card__specialty">
+                    Haircut • Haircut + Beard • Kids Haircut • Shape Up • Hair Design
+                  </p>
+                  <p class="barber-card__bio">
+                    Strong fit for clients who want balanced barbering, clean presentation, and premium consistency.
+                  </p>
+
+                  <div class="barber-card__meta">
+                    <span class="barber-card__tag">Shop 1</span>
+                    <span class="barber-card__tag">Clean Finish</span>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="btn btn--secondary js-select-barber"
+                    data-shop="shop-1"
+                    data-barber="Jonathan"
+                    data-barber-id="jonathan"
+                    data-scroll-target="#booking-section"
+                  >
+                    Select Jonathan
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="barber-card js-barber-card"
+                data-shop="shop-1"
+                data-shop-label="Solutions Barbershop 1"
+                data-barber="Lenin"
+                data-barber-id="lenin"
+                tabindex="0"
+                aria-label="Select Lenin at Solutions Barbershop 1"
+              >
+                <div class="barber-card__image-wrap">
+                  <div class="barber-card__image barber-card__image--placeholder" aria-hidden="true">
+                    <span class="barber-card__initials">LN</span>
+                  </div>
+                </div>
+
+                <div class="barber-card__content">
+                  <p class="barber-card__role">Master Barber</p>
+                  <h3>Lenin</h3>
+                  <p class="barber-card__specialty">
+                    Haircut • Haircut + Beard • Kids Haircut • Shape Up
+                  </p>
+                  <p class="barber-card__bio">
+                    Great for reliable maintenance cuts, sharp lineups, and polished everyday grooming.
+                  </p>
+
+                  <div class="barber-card__meta">
+                    <span class="barber-card__tag">Shop 1</span>
+                    <span class="barber-card__tag">Maintenance Pro</span>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="btn btn--secondary js-select-barber"
+                    data-shop="shop-1"
+                    data-barber="Lenin"
+                    data-barber-id="lenin"
+                    data-scroll-target="#booking-section"
+                  >
+                    Select Lenin
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="booking-team-group" data-shop="shop-2" id="shop-2-team">
+            <div class="booking-team-group__heading">
+              <p class="eyebrow">Shop 2 Team</p>
+              <h3>Solutions Barber Shop 2</h3>
+            </div>
+
+            <div class="booking-team__grid booking-team__grid--single">
+              <article
+                class="barber-card js-barber-card"
+                data-shop="shop-2"
+                data-shop-label="Solutions Barber Shop 2"
+                data-barber="Juan"
+                data-barber-id="juan"
+                tabindex="0"
+                aria-label="Select Juan at Solutions Barber Shop 2"
+              >
+                <div class="barber-card__image-wrap">
+                  <div class="barber-card__image barber-card__image--placeholder" aria-hidden="true">
+                    <span class="barber-card__initials">JN</span>
+                  </div>
+                </div>
+
+                <div class="barber-card__content">
+                  <p class="barber-card__role">Master Barber</p>
+                  <h3>Juan</h3>
+                  <p class="barber-card__specialty">
+                    Haircut • Haircut + Beard • Kids Haircut • Shape Up • Hair Wash • House Call
+                  </p>
+                  <p class="barber-card__bio">
+                    Best for fuller appointment experiences, including wash add-ons and broader service range.
+                  </p>
+
+                  <div class="barber-card__meta">
+                    <span class="barber-card__tag">Shop 2</span>
+                    <span class="barber-card__tag">Full Service</span>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="btn btn--secondary js-select-barber"
+                    data-shop="shop-2"
+                    data-barber="Juan"
+                    data-barber-id="juan"
+                    data-scroll-target="#booking-section"
+                  >
+                    Select Juan
+                  </button>
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section booking-page booking-page--apple" id="booking-section">
         <div class="container">
-          <div class="section-heading section-heading--center">
-            <p class="eyebrow">Direct Location Booking</p>
-            <h2>Book directly with your preferred location.</h2>
-            <p>
-              Clients can also go straight to the exact location they want.
+          <div class="section-heading booking-page__heading">
+            <p class="eyebrow">Booking</p>
+            <h2>Build the appointment before you launch the booking link.</h2>
+            <p class="booking-intro">
+              This layout is designed to feel clearer, more premium, and more intelligent.
+              Your selections stay visible at all times so the user always knows exactly what comes next.
             </p>
           </div>
 
-          <div class="locations-grid">
-            <article class="location-card">
-              <div class="location-card__content">
-                <p class="location-card__label">Location 1</p>
-                <h3>Solutions Barbershop 1</h3>
-                <p class="location-card__address">
-                  342 Second St, Jersey City, NJ 07302
-                </p>
-                <p class="location-card__meta">
-                  Direct booking for the first location.
+          <div class="booking-page__grid">
+            <div class="booking-card">
+              <div class="booking-card__top">
+                <div class="booking-progress" aria-label="Booking progress">
+                  <span class="booking-progress__step is-active" data-progress-step="1">Location</span>
+                  <span class="booking-progress__step" data-progress-step="2">Barber</span>
+                  <span class="booking-progress__step" data-progress-step="3">Service</span>
+                  <span class="booking-progress__step" data-progress-step="4">Method</span>
+                </div>
+
+                <div class="booking-card__pill-row" aria-label="Booking system features">
+                  <span class="booking-ui-pill">Dynamic shop sync</span>
+                  <span class="booking-ui-pill">Dynamic barber sync</span>
+                  <span class="booking-ui-pill">Live summary</span>
+                </div>
+              </div>
+
+              <form class="booking-form" id="bookingForm" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="shopLocation">Shop Location</label>
+                    <select id="shopLocation" name="shopLocation" required autocomplete="off">
+                      <option value="">Choose a shop location</option>
+                      <option value="shop-1" data-shop-label="Solutions Barbershop 1">
+                        Solutions Barbershop 1
+                      </option>
+                      <option value="shop-2" data-shop-label="Solutions Barber Shop 2">
+                        Solutions Barber Shop 2
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="preferredBarber">Preferred Barber</label>
+                    <select
+                      id="preferredBarber"
+                      name="preferredBarber"
+                      required
+                      autocomplete="off"
+                      disabled
+                      aria-describedby="barberHelp"
+                    >
+                      <option value="">Choose a shop first</option>
+                      <option value="channel" data-shop="shop-1" data-barber-label="Channel">
+                        Channel
+                      </option>
+                      <option value="jonathan" data-shop="shop-1" data-barber-label="Jonathan">
+                        Jonathan
+                      </option>
+                      <option value="lenin" data-shop="shop-1" data-barber-label="Lenin">
+                        Lenin
+                      </option>
+                      <option value="juan" data-shop="shop-2" data-barber-label="Juan">
+                        Juan
+                      </option>
+                    </select>
+                    <p id="barberHelp" class="booking-note">
+                      Barber options change automatically when the selected shop changes.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="preferredService">Preferred Service (optional)</label>
+                    <select id="preferredService" name="preferredService" autocomplete="off">
+                      <option value="">Any service</option>
+                      <option value="haircut">Haircut</option>
+                      <option value="haircut-and-beard">Haircut + Beard</option>
+                      <option value="kids-haircut">Kids Haircut</option>
+                      <option value="shape-up">Shape Up</option>
+                      <option value="hair-design">Hair Design</option>
+                      <option value="hair-wash">Hair Wash</option>
+                      <option value="house-call">House Call</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="bookingReference">Selection Reference</label>
+                    <input
+                      id="bookingReference"
+                      name="bookingReference"
+                      type="text"
+                      value="Choose your booking method below"
+                      readonly
+                      aria-readonly="true"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row form-row--single">
+                  <div class="form-group">
+                    <label for="bookingNotes">Notes (optional)</label>
+                    <textarea
+                      id="bookingNotes"
+                      name="bookingNotes"
+                      placeholder="Add any details you want to remember before opening the final booking link."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="booking-quick-services" aria-label="Quick service selection">
+                  <span class="booking-section-label">Quick Picks</span>
+
+                  <div class="booking-chip-group">
+                    <button type="button" class="booking-chip js-service-chip" data-service="haircut">
+                      Haircut
+                    </button>
+                    <button type="button" class="booking-chip js-service-chip" data-service="haircut-and-beard">
+                      Haircut + Beard
+                    </button>
+                    <button type="button" class="booking-chip js-service-chip" data-service="kids-haircut">
+                      Kids Haircut
+                    </button>
+                    <button type="button" class="booking-chip js-service-chip" data-service="shape-up">
+                      Shape Up
+                    </button>
+                    <button type="button" class="booking-chip js-service-chip" data-service="hair-design">
+                      Hair Design
+                    </button>
+                    <button type="button" class="booking-chip js-service-chip" data-service="hair-wash">
+                      Hair Wash
+                    </button>
+                    <button type="button" class="booking-chip js-service-chip" data-service="house-call">
+                      House Call
+                    </button>
+                  </div>
+                </div>
+
+                <div class="booking-method-compare">
+                  <article class="booking-method-card booking-method-card--booksy">
+                    <span class="booking-section-label">Booksy</span>
+                    <h3>Best for direct location booking</h3>
+                    <p>
+                      Shop-based booking that updates automatically with the selected location.
+                    </p>
+                    <ul class="booking-method-card__list">
+                      <li>Changes by selected shop</li>
+                      <li>Fastest booking handoff</li>
+                      <li>Simple direct path</li>
+                    </ul>
+                  </article>
+
+                  <article class="booking-method-card booking-method-card--google">
+                    <span class="booking-section-label">Google</span>
+                    <h3>Shared schedule option</h3>
+                    <p>
+                      Uses the same shared Google booking schedule while preserving the selection context.
+                    </p>
+                    <ul class="booking-method-card__list">
+                      <li>Available for both shops</li>
+                      <li>Works from the same interface</li>
+                      <li>Clean secondary booking path</li>
+                    </ul>
+                  </article>
+                </div>
+
+                <div class="booking-submit">
+                  <span class="booking-section-label">Choose How To Book</span>
+
+                  <div class="booking-methods" role="group" aria-label="Booking methods">
+                    <button
+                      type="button"
+                      id="booksyBookingButton"
+                      class="btn btn--primary booking-action-btn"
+                      disabled
+                      aria-disabled="true"
+                      data-method="booksy"
+                    >
+                      Book with Booksy
+                    </button>
+
+                    <button
+                      type="button"
+                      id="googleBookingButton"
+                      class="btn btn--secondary booking-action-btn"
+                      disabled
+                      aria-disabled="true"
+                      data-method="google"
+                    >
+                      Book with Google
+                    </button>
+
+                    <button
+                      type="button"
+                      id="clearBookingSelection"
+                      class="btn btn--secondary booking-action-btn booking-action-btn--ghost"
+                      data-method="reset"
+                    >
+                      Clear Selection
+                    </button>
+                  </div>
+
+                  <p class="booking-note" id="bookingStatus" aria-live="polite">
+                    Choose a location and barber to unlock both booking options.
+                  </p>
+
+                  <p class="booking-note">
+                    Google booking currently uses the shared Solutions Barbershop booking schedule
+                    for both locations.
+                  </p>
+                </div>
+              </form>
+            </div>
+
+            <aside class="booking-sidebar" aria-label="Booking sidebar">
+              <div class="booking-sidebar__block booking-sidebar__block--summary">
+                <span class="booking-section-label">Live Summary</span>
+                <h3>Your selection stays visible.</h3>
+
+                <div class="booking-mini-card">
+                  <dl class="booking-summary">
+                    <div class="booking-summary__item">
+                      <dt>Location</dt>
+                      <dd id="bookingSummaryShop">Not selected</dd>
+                    </div>
+
+                    <div class="booking-summary__item">
+                      <dt>Barber</dt>
+                      <dd id="bookingSummaryBarber">Not selected</dd>
+                    </div>
+
+                    <div class="booking-summary__item">
+                      <dt>Service</dt>
+                      <dd id="bookingSummaryService">Any service</dd>
+                    </div>
+
+                    <div class="booking-summary__item">
+                      <dt>Method</dt>
+                      <dd id="bookingSummaryMethod">Not selected</dd>
+                    </div>
+                  </dl>
+                </div>
+
+                <div class="booking-selection-tags" aria-label="Selection tags">
+                  <span class="booking-selection-tag" id="summaryTagShop">No shop selected</span>
+                  <span class="booking-selection-tag" id="summaryTagBarber">No barber selected</span>
+                  <span class="booking-selection-tag" id="summaryTagService">Any service</span>
+                </div>
+              </div>
+
+              <div class="booking-sidebar__block booking-sidebar__block--links">
+                <span class="booking-section-label">Quick Access</span>
+                <h3>Directions and direct links</h3>
+                <p>
+                  Open maps, review location details, or jump into external booking destinations when needed.
                 </p>
 
-                <div class="location-card__actions">
+                <div class="booking-link-stack">
+                  <a
+                    href="https://www.google.com/maps/place/Solutions+Barber+Shop1/@40.7230277,-74.0551343,16z/data=!4m10!1m2!2m1!1sSolutions+Barber+Shop2!3m6!1s0x89c250b26aaaaaab:0x131466983951f1e1!8m2!3d40.7230277!4d-74.0483975!15sChZTb2x1dGlvbnMgQmFyYmVyIFNob3AyWhgiFnNvbHV0aW9ucyBiYXJiZXIgc2hvcDKSAQtiYXJiZXJfc2hvcOABAA!16s%2Fg%2F11dzs_7f61?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--secondary"
+                  >
+                    Shop 1 Map
+                  </a>
+
+                  <a
+                    href="https://www.google.com/maps/place/Solutions+barber+shop+2/@40.7230277,-74.0551343,16z/data=!4m10!1m2!2m1!1sSolutions+Barber+Shop2!3m6!1s0x89c251b2bd494c13:0xd9ad3f0f8f757e2c!8m2!3d40.7202657!4d-74.0460391!15sChZTb2x1dGlvbnMgQmFyYmVyIFNob3AyWhgiFnNvbHV0aW9ucyBiYXJiZXIgc2hvcDKSAQtiYXJiZXJfc2hvcOABAA!16s%2Fg%2F11mylf8vjg?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--secondary"
+                  >
+                    Shop 2 Map
+                  </a>
+
                   <a
                     href="https://booksy.com/en-us/444251_solutions-barbershop-1_barber-shop_28561_jersey-city#ba_s=sh_1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn btn--primary"
+                    class="btn btn--secondary"
                   >
-                    Book Location 1
+                    Open Booksy 1
                   </a>
-                </div>
-              </div>
-            </article>
 
-            <article class="location-card">
-              <div class="location-card__content">
-                <p class="location-card__label">Location 2</p>
-                <h3>Solutions Barber Shop 2</h3>
-                <p class="location-card__address">
-                  163 Christopher Columbus Dr, Jersey City, NJ 07302
-                </p>
-                <p class="location-card__meta">
-                  Direct booking for the second location.
-                </p>
-
-                <div class="location-card__actions">
                   <a
                     href="https://booksy.com/en-us/88253_solutions-barber-shop-2_barber-shop_28561_jersey-city#ba_s=sh_1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn btn--primary"
+                    class="btn btn--secondary"
                   >
-                    Book Location 2
+                    Open Booksy 2
                   </a>
                 </div>
               </div>
-            </article>
+
+              <div class="booking-sidebar__block booking-sidebar__block--trust">
+                <span class="booking-section-label">Why It Feels Better</span>
+                <h3>Premium structure without extra friction.</h3>
+
+                <ul class="expect-list">
+                  <li>Location cards auto-select the correct shop and move the client into the form.</li>
+                  <li>Barber cards auto-select both shop and barber together.</li>
+                  <li>Booksy updates automatically based on the chosen location.</li>
+                  <li>Google remains available in the same premium flow.</li>
+                  <li>Live summary keeps the booking context visible at all times.</li>
+                  <li>Quick service picks speed up the experience on mobile and desktop.</li>
+                </ul>
+
+                <a href="#shop-locations" class="back-link">
+                  Back to locations
+                </a>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section booking-faq booking-faq--apple" id="booking-faq">
         <div class="container">
           <div class="section-heading section-heading--center">
             <p class="eyebrow">Booking Notes</p>
-            <h2>Clear paths for every type of client.</h2>
+            <h2>Simple details that make the experience clearer.</h2>
             <p>
-              Keep this page focused on booking only, so it stays easy to understand and easy to use.
+              Clear answers before the click-out help keep the booking journey feeling intentional and premium.
             </p>
           </div>
 
-          <div class="locations-grid">
-            <article class="location-card">
-              <div class="location-card__content">
-                <p class="location-card__label">Fastest Option</p>
-                <h3>Google Appointment Booking</h3>
-                <p class="location-card__address">
-                  Best for clients who want to view available times and reserve immediately.
-                </p>
-              </div>
+          <div class="booking-faq__grid">
+            <article class="booking-faq-card">
+              <h3>How does shop selection work?</h3>
+              <p>
+                The chosen location controls the available barber options and determines which Booksy destination opens.
+              </p>
             </article>
 
-            <article class="location-card">
-              <div class="location-card__content">
-                <p class="location-card__label">Location Specific</p>
-                <h3>Booksy by Location</h3>
-                <p class="location-card__address">
-                  Best for clients who already know which location they want to visit.
-                </p>
-              </div>
+            <article class="booking-faq-card">
+              <h3>How does Google booking work?</h3>
+              <p>
+                Google currently uses the shared Solutions Barbershop booking schedule for both locations.
+              </p>
             </article>
-          </div>
-        </div>
-      </section>
 
-      <section class="section cta-section">
-        <div class="container">
-          <div class="cta-panel">
-            <p class="eyebrow">Ready to Reserve?</p>
-            <h2>Choose your booking path and secure your time.</h2>
-            <p>
-              Book through the Google appointment page or go directly to the location of your choice.
-            </p>
-
-            <div class="hero__buttons hero__buttons--center">
-              <a
-                href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0E1r_4To1sK164vhmS2AgQCMe7xYa3B7efXYMJTUBiBKLMbh55CI8Kr1EiWnxWw4CgQrz9uj-W?gv=true"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn--primary"
-              >
-                Book Through Google
-              </a>
-
-              <a href="services.html" class="btn btn--secondary">
-                View Services
-              </a>
-            </div>
+            <article class="booking-faq-card">
+              <h3>Can the client choose services first?</h3>
+              <p>
+                Yes. The page includes both a service dropdown and quick-pick service chips for faster interaction.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -345,7 +926,10 @@
 
           <div>
             <h3>Book</h3>
-            <a href="booking.html">Reserve Appointment</a>
+            <a href="#booking-section">Start Booking</a>
+            <a href="#shop-locations">Choose Location</a>
+            <a href="#booking-team">Choose Barber</a>
+            <a href="#booking-faq">Booking Notes</a>
           </div>
         </div>
       </div>
@@ -362,48 +946,58 @@
     </footer>
 
     <a
-      href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0E1r_4To1sK164vhmS2AgQCMe7xYa3B7efXYMJTUBiBKLMbh55CI8Kr1EiWnxWw4CgQrz9uj-W?gv=true"
-      target="_blank"
-      rel="noopener noreferrer"
+      href="#booking-section"
       class="sticky-book"
-      aria-label="Book an appointment"
+      aria-label="Jump to booking form"
     >
       Book Now
     </a>
   </div>
 
   <script src="js/main.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    window.addEventListener("load", function () {
-      if (window.calendar && calendar.schedulingButton) {
-        calendar.schedulingButton.load({
-          url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0E1r_4To1sK164vhmS2AgQCMe7xYa3B7efXYMJTUBiBKLMbh55CI8Kr1EiWnxWw4CgQrz9uj-W?gv=true",
-          color: "#d4bea0",
-          label: "Book an appointment",
-          target: document.getElementById("google-booking-button")
-        });
-      }
-    });
-  </script>
+  <script src="js/booking.js"></script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Book an Appointment | Solutions Barbershop Jersey City",
+    "@type": "Barbershop",
+    "@id": "https://solutionsbarbershop.com/booking.html#business",
+    "name": "Solutions Barbershop",
     "url": "https://solutionsbarbershop.com/booking.html",
-    "description": "Book your appointment at Solutions Barbershop through Google booking or direct location booking links for our Jersey City barbershops.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Solutions Barbershop",
-      "url": "https://solutionsbarbershop.com/"
-    },
-    "about": {
-      "@type": "Barbershop",
-      "name": "Solutions Barbershop"
-    }
+    "image": "https://solutionsbarbershop.com/images/logo.png",
+    "description": "Premium one-page booking system for Solutions Barbershop across two Jersey City locations.",
+    "priceRange": "$$",
+    "department": [
+      {
+        "@type": "Barbershop",
+        "name": "Solutions Barbershop 1",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "342 Second St",
+          "addressLocality": "Jersey City",
+          "addressRegion": "NJ",
+          "postalCode": "07302",
+          "addressCountry": "US"
+        }
+      },
+      {
+        "@type": "Barbershop",
+        "name": "Solutions Barber Shop 2",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "163 Christopher Columbus Dr",
+          "addressLocality": "Jersey City",
+          "addressRegion": "NJ",
+          "postalCode": "07302",
+          "addressCountry": "US"
+        }
+      }
+    ],
+    "sameAs": [
+      "https://instagram.com/solutions_barbershop_2",
+      "https://booksy.com/en-us/444251_solutions-barbershop-1_barber-shop_28561_jersey-city#ba_s=sh_1",
+      "https://booksy.com/en-us/88253_solutions-barber-shop-2_barber-shop_28561_jersey-city#ba_s=sh_1"
+    ]
   }
   </script>
 </body>
