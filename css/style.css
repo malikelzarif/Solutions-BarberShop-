@@ -1,6 +1,7 @@
 /* =========================================================
    Solutions Barbershop — ELITE VERSION FIXED
    Mobile-refined / white-black-beige premium system
+   Upgraded for live reviews section + see more / less
    ========================================================= */
 
 :root {
@@ -810,6 +811,115 @@ p {
 }
 
 /* -----------------------------
+   Live Reviews Upgrade
+------------------------------ */
+.reviews-summary {
+  text-align: center;
+  margin: 0 auto 30px;
+}
+
+#avgRating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 8px;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1;
+}
+
+#totalReviews {
+  margin: 0;
+  color: var(--muted);
+}
+
+#reviewsContainer {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  margin-top: 34px !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+}
+
+#reviewsContainer.gallery-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+}
+
+#reviewsContainer .review-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 260px !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 30px 24px !important;
+  border-radius: var(--radius-xl) !important;
+  text-align: center !important;
+  animation: none !important;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--dur-fast) var(--ease),
+    box-shadow var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+}
+
+#reviewsContainer .review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(212, 190, 160, 0.34);
+}
+
+#reviewsContainer .review-card .stars {
+  margin-bottom: 14px;
+}
+
+#reviewsContainer .review-card p {
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  margin: 0 0 14px !important;
+}
+
+#reviewsContainer .review-card h3 {
+  margin: 0 !important;
+  color: var(--black) !important;
+}
+
+#toggleReviewsBtn[hidden] {
+  display: none !important;
+}
+
+.reviews-toggle {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.review-cta {
+  text-align: center;
+  margin-top: 18px;
+}
+
+#toggleReviewsBtn,
+.reviews-toggle .btn,
+.review-cta .btn {
+  min-width: 220px;
+}
+
+#reviewsContainer:has(.review-card:only-child) {
+  grid-template-columns: minmax(320px, 640px) !important;
+  justify-content: center !important;
+}
+
+#reviewsContainer:has(.review-card:only-child) .review-card {
+  max-width: 640px !important;
+  margin-inline: auto !important;
+}
+
+/* -----------------------------
    Locations
 ------------------------------ */
 .locations-grid {
@@ -1059,6 +1169,11 @@ p {
   .service-feature__image img {
     height: 560px;
   }
+
+  #reviewsContainer,
+  #reviewsContainer.gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
 }
 
 /* -----------------------------
@@ -1144,9 +1259,6 @@ p {
   }
 }
 
-/* -----------------------------
-   Mobile
------------------------------- */
 @media (max-width: 768px) {
   :root {
     --header-h: 92px;
@@ -1234,7 +1346,9 @@ p {
   .hero__buttons .btn,
   .btn--block,
   .review-btn,
-  .location-card__actions .btn {
+  .location-card__actions .btn,
+  #toggleReviewsBtn,
+  .review-cta .btn {
     width: 100%;
   }
 
@@ -1341,12 +1455,14 @@ p {
     min-height: auto;
   }
 
-  .review-card {
+  .review-card,
+  #reviewsContainer .review-card {
     padding: 24px 16px;
     border-radius: 22px;
   }
 
-  .review-card p {
+  .review-card p,
+  #reviewsContainer .review-card p {
     font-size: 0.98rem;
     line-height: 1.6;
   }
@@ -1354,6 +1470,13 @@ p {
   .reviews-controls {
     gap: 8px;
     margin-top: 14px;
+  }
+
+  #reviewsContainer,
+  #reviewsContainer.gallery-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin-top: 24px !important;
   }
 
   .locations-grid {
@@ -1446,9 +1569,6 @@ p {
   }
 }
 
-/* -----------------------------
-   Small Mobile
------------------------------- */
 @media (max-width: 520px) {
   .hero h1 {
     font-size: clamp(1.95rem, 9.5vw, 2.55rem);
@@ -1465,5 +1585,9 @@ p {
 
   .location-card__map {
     height: 190px;
+  }
+
+  #avgRating {
+    font-size: 2rem;
   }
 }
